@@ -13,7 +13,7 @@ SRC_URI="http://www.inf.puc-rio.br/~roberto/lpeg/lpeg-${VERSION}.tar.gz"
 SRC_DIR="lpeg-${VERSION}"
 
 ################################
-LUA_VERSIONS="5.3:5.4"
+LUA_VERSIONS="5.1:5.2:5.3:5.4"
 LUA_PKG_NAME="${NAME#lua-}"
 source lua.experiment
 
@@ -33,6 +33,8 @@ PATCH_URI+="
 ## Requirements for building
 ################################
 BUILD_REQUIRES="\
+  lua51-devel\
+  lua52-devel\
   lua53-devel\
   lua54-devel\
 "
